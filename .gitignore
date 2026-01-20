@@ -1,0 +1,31 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+bin/
+target/
+.metadata/
+.classpath
+.project
+.settings/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+.env
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
