@@ -20,8 +20,16 @@ class Client:
 
             print("Connected to Caro Arena Server!")
 
-            # Simple login with timestamp
-            username = f"Player_{int(time.time() % 1000)}"
+            # Prompt for username instead of auto-generating
+            import tkinter.simpledialog as sd
+            temp_root = tk.Tk()
+            temp_root.withdraw()
+            username = sd.askstring("Login", "Enter your username:", parent=temp_root)
+            temp_root.destroy()
+
+            if not username:
+                username = f"Player_{int(time.time() % 1000)}"
+
             self.send(f"LOGIN:{username}")
             
             # Auto join room 1
